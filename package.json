@@ -1,6 +1,6 @@
 {
-  "name": "selenium-cucumber-js",
-  "version": "0.1",
+  "name": "pokerStarsAutomation",
+  "version": "0.1.0",
   "description": "Selenium Webdriver & Cucumber framework in JS. Based on framework from https://github.com/john-doherty",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "author": {
     "name": "Tom Leighton",
-    "email": "tom.j.leighton {at} live.co.uk"
+    "email": "tom.j.leighton@live.co.uk"
   },
   "license": "ISC",
   "keywords": [
@@ -45,10 +45,9 @@
     "cucumber": "1.3.3",
     "cucumber-html-reporter": "4.0.4",
     "cucumber-junit": "^1.7.1",
-    "electron": "^1.8.8",
+    "electron": "^10.1.5",
     "electron-chromedriver": "^1.7.1",
     "electron-packager": "^9.1.0",
-    "electron-prebuilt": "^1.4.13",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.2.0",
@@ -56,9 +55,9 @@
     "fs-plus": "2.9.1",
     "geckodriver": "^1.16.2",
     "merge": "^1.2.1",
-    "phantomjs-prebuilt": "^2.1.16",
     "require-dir": "0.3.2",
-    "selenium-webdriver": "3.5.0"
+    "selenium-cucumber-js": "git+https://github.com/tjl694/selenium-cucumber-js.git",
+    "selenium-webdriver": "3.6.0"
   },
   "eslintConfig": {
     "extends": "airbnb-base",
