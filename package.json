@@ -1,15 +1,14 @@
 {
   "name": "selenium-cucumber-js",
-  "version": "1.7.1",
-  "description": "JavaScript browser automation framework using official selenium-webdriver and cucumber-js",
+  "version": "0.1",
+  "description": "Selenium Webdriver & Cucumber framework in JS. Based on framework from https://github.com/john-doherty",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
   },
   "author": {
-    "name": "John Doherty",
-    "email": "contact@johndoherty.info",
-    "url": "https://courseof.life/johndoherty"
+    "name": "Tom Leighton",
+    "email": "tom.j.leighton {at} live.co.uk"
   },
   "license": "ISC",
   "keywords": [
@@ -27,16 +26,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/john-doherty/selenium-cucumber-js.git"
+    "url": "git://github.com/tjl694/PokerStarsAutomation.git"
   },
   "bugs": {
-    "url": "https://github.com/john-doherty/selenium-cucumber-js/issues"
+    "url": "https://github.com/tjl694/PokerStarsAutomation/issues"
   },
   "engines": {
     "node": ">=6.11.0"
   },
   "engineStrict": true,
-  "homepage": "https://github.com/john-doherty/selenium-cucumber-js#readme",
+  "homepage": "https://github.com/tjl694/PokerStarsAutomation#readme",
   "dependencies": {},
   "devDependencies": {
     "chai": "3.5.0",
