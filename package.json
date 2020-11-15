@@ -1,10 +1,10 @@
 {
   "name": "pokerStarsAutomation",
   "version": "0.1.0",
-  "description": "Selenium Webdriver & Cucumber framework in JS. Based on framework from https://github.com/john-doherty",
+  "description": "Selenium Webdriver & Cucumber framework in JS. Based on my fork of the framework from https://github.com/john-doherty",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node ./node_modules/selenium-cucumber-js/index.js"
   },
   "author": {
     "name": "Tom Leighton",
