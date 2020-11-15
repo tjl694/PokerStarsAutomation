@@ -19,7 +19,6 @@
     "webdriver",
     "selenium-webdriver",
     "chromedriver",
-    "phantomjs",
     "testing",
     "junit",
     "bdd"
