@@ -9,7 +9,7 @@ This is a Selenium WebDriver framework in JavaScript, based on [my fork](https:/
 This requires [Node.js](https://nodejs.org/) to run.
 1. Clone the repo
 2. ```cd``` into the folder you just cloned into
-3. run ```npm install```
+3. Run ```npm install```
 
 ### Running the framework
 ```sh
@@ -20,11 +20,9 @@ Once ```npm run test``` has finished, a HTML report will be available in the ```
 
 ### Understanding the framework
 There are 3 main folders
-- features - home of the gherkin/cucmber steps
-- step-definitions - home of the gherkin step definitions and functions
-- page-objects - home of the defined elements for pages and any other functions
-
-
+- ```features``` - home of the gherkin/cucmber steps
+- ```step-definitions``` - home of the gherkin step definitions and functions
+- ```page-objects``` - home of the defined elements for pages and any other functions
 
 ### Todo
 - Implement automatic retry if Scenario fails (to a limited number of retries)
