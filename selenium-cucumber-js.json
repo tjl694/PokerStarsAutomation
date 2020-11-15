@@ -4,5 +4,5 @@
     "sharedObjects": "./shared-objects",
     "reports": "./reports",
     "browser": "chrome",
-    "timeout": 15000
+    "timeout": 20000
 }

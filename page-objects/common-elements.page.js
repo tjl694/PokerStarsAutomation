@@ -1,17 +1,13 @@
 const { By } = require("selenium-webdriver");
-const { Driver } = require("selenium-webdriver/chrome");
-
-
 
 module.exports = {
-
-    url: 'https://www.pokerstarssports.uk',
-
+    
     elements: {
         sportsAToZMenuBtn: By.css('#sportsList #showExtendedMenu'),
         sportsAToZMenu: By.id('extendedMenu'),
-        aToZMenuSportItem: By.css('.extendedMenu__item')
+        aToZMenuSportItem: By.css('.extendedMenu__item'),
+        headerSportsActive: By.css('#site-header a.sports-vertical.active'),
+        pageContent: By.css('#content'),
     } 
 
-    
 };

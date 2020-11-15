@@ -1,9 +1,6 @@
 const { By } = require("selenium-webdriver");
 
 module.exports = {
-
-    url: 'https://www.pokerstarssports.uk',
-
     elements: {
         outrightsTab: By.id('link__outrights'),
         outrightsTabActive: By.css('.active#link__outrights'),
@@ -12,7 +9,9 @@ module.exports = {
         viewMoreOutcomes: By.css('[data-type="showMore-outright"]'),
         eventOutcomeName: By.css('.eventSelection--title'),
         selectedOutcomeName: By.css('.selected .eventSelection--title'),
+        outcomeUnselected: By.css('.SelectionRemoved'),
         selectedOutcomeOdds: By.css('.selected .eventSelection--price'),
+        betSlipNoBets: By.css('#bets-singles p.noBets'),
         betSlipCount: By.css('.singleBetsCounter'),
         betSlipOutcomeName: By.css('.bet-selections .selectionname'),
         betSlipOutcomeEvent: By.css('.bet-selections a.selection__fixture'),
@@ -20,5 +19,22 @@ module.exports = {
         betSlipRemoveIcon: By.css('.bet-selections .remove')
     },
 
+    eventGetApiRequest: async function (url) {
+        return new Promise (function (resolve, reject) {
+            var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+            var request = new XMLHttpRequest();
+            request.open('GET', url, true);
+            request.onload = function () {
+                const successStatus = 200;
+                if (request.status === successStatus) {
+                    var response = JSON.parse(request.responseText);
+                    return resolve(response);
+                } else {
+                    return reject ('Failed API request');
+                }
+            };
+            request.send();
+        });
+    }
     
 };
