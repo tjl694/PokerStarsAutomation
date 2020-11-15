@@ -4,7 +4,7 @@
   "description": "Selenium Webdriver & Cucumber framework in JS. Based on my fork of the framework from https://github.com/john-doherty",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/selenium-cucumber-js/index.js"
+    "test": "node ./index.js"
   },
   "author": {
     "name": "Tom Leighton",
@@ -55,7 +55,6 @@
     "geckodriver": "^1.16.2",
     "merge": "^1.2.1",
     "require-dir": "0.3.2",
-    "selenium-cucumber-js": "git+https://github.com/tjl694/selenium-cucumber-js.git",
     "selenium-webdriver": "3.6.0",
     "xmlhttprequest": "^1.8.0"
   },

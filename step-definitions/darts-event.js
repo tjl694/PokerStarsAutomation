@@ -83,8 +83,8 @@ module.exports = function () {
         await driver.wait(until.elementLocated(dartsEventPage.elements.outrightsTab));
         if ((await driver.findElements(dartsEventPage.elements.outrightsTabActive)).length === 0) {
             await driver.findElement(dartsEventPage.elements.outrightsTab).click();
-            await driver.wait(until.elementLocated(dartsEventPage.elements.events));
         }
+        return driver.wait(until.elementLocated(dartsEventPage.elements.events));
     };
 
     const selectSpecificEvent = async function (eventName) {

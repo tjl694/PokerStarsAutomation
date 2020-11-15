@@ -17,7 +17,7 @@ npm run test
 ```
 It defaults to running in Chrome, but this can be switched to Firefox in the ```browser``` key value of ```./selenium-cucumber-js.json``` file.
 ### Reporting
-Once ```npm run test``` has finished, a HTML report will be available in the ```reports``` folder.
+Once ```npm run test``` has finished, a HTML report, ```cucumber-report.html```, will be available in the ```reports``` folder.
 
 ### Understanding the framework
 There are 3 main folders
