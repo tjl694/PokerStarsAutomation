@@ -43,5 +43,5 @@ module.exports = function () {
         }
         return assert.fail(`${sport} not found in list`);
     };
-}
+};
 
