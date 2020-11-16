@@ -1,4 +1,5 @@
 const config = require("../config.json");
+const seleniumConfig = require("../selenium-cucumber-js.json");
 const { expect, assert } = require("chai");
 const commonElementsPage = require("../page-objects/common-elements.page");
 
@@ -6,7 +7,7 @@ module.exports = function () {
 
     this.Given(/^I am on the PokerStars Sports home page$/, async function () {
         await helpers.loadPage(config.baseSportsUrl);
-        await driver.wait(until.elementLocated(commonElementsPage.elements.pageContent));
+        await waitForPageToFinishLoading();
         expect(await driver.getTitle()).to.contain("PokerStars Sports");
     });
 
@@ -22,8 +23,16 @@ module.exports = function () {
         expect(await driver.wait(until.urlContains(sport.toLowerCase()))).to.be.true;
     });
 
+    const waitForPageToFinishLoading = async function() {
+        const placeholderEls = await driver.findElements(commonElementsPage.elements.placeholderEl);
+        if (placeholderEls.length > 0){
+            await driver.wait(until.stalenessOf(placeholderEls[0]));
+        }
+        return driver.wait(until.elementLocated(commonElementsPage.elements.pageContent),seleniumConfig.timeout);
+    };
+
     const openSportsAToZMenu = async function() {
-        await driver.findElements(commonElementsPage.elements.sportsAToZMenuBtn, 10000);
+        await driver.wait(until.elementLocated(commonElementsPage.elements.sportsAToZMenuBtn));
         await driver.wait(until.elementIsEnabled(await driver.findElement(commonElementsPage.elements.sportsAToZMenuBtn)));
         if (await driver.findElements(commonElementsPage.elements.sportsAToZMenu).length > 1){ //Checking to see if Sport A-to-Z Menu is already open
             return;
