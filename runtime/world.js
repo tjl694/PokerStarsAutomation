@@ -243,10 +243,10 @@ module.exports = function () {
     // executed after each scenario (always closes the browser to ensure fresh tests)
     this.After(function (scenario) {
         if (!global.noScreenshot) {
-            // add a screenshot to the error report
+            // add a screenshot to the report
             return driver.takeScreenshot().then(function (screenShot) {
 
-                scenario.attach(new Buffer(screenShot, 'base64'), 'image/png');
+                scenario.attach(Buffer.from(screenShot, 'base64'), 'image/png');
 
                 return teardownBrowser().then(function() {
                     if (eyes) {
